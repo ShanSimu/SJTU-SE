@@ -1,0 +1,22 @@
+delete from users;
+delete from books;
+delete from orders;
+delete from carts;
+-- delete from orderitems;
+
+insert into users values ('1', 'admin', '123',1,"12345@qq.com",1);
+insert into users values ('2', 'test' , '456',0,"23333@gmail.com",1);
+insert into users values ('3', 'third' , '789',0,"23333@gmail.com",0);
+insert into books values ('1', 'Harry Potter and the Philosopher Stone','Joanne Rowling','9787020033430','100','23.5','Harry Potter and the Philosophers Stone is a fantasy novel written by British author J. K. Rowling. The first novel in the Harry Potter series and Rowlings debut novel, it follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, Harry faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harrys parents, but failed to kill Harry when he was just 15 months old.');
+insert into books values ('2','Nineteen Eighty-Four','George Orwell','9787530210291','100','25.7','A Novel, often published as 1984, is a dystopian novel by English novelist George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwells ninth and final book completed in his lifetime. The story was mostly written at Barnhill, a farmhouse on the Scottish island of Jura, at times while Orwell suffered from severe tuberculosis. Thematically, Nineteen Eighty-Four centres on the consequences of government over-reach, totalitarianism, mass surveillance, and repressive regimentation of all persons and behaviours within society');
+insert into books values ('3','The Great Gatsby','F. Scott Fitzgerald','9787020046089','100','30.0','The Great Gatsby is a 1925 novel written by American author F. Scott Fitzgerald that follows a cast of characters living in the fictional towns of West Egg and East Egg on prosperous Long Island in the summer of 1922. The story primarily concerns the young and mysterious millionaire Jay Gatsby and his quixotic passion and obsession with the beautiful former debutante Daisy Buchanan. Considered to be Fitzgeralds magnum opus, The Great Gatsby explores themes of decadence, idealism, resistance to change, social upheaval and excess, creating a portrait of the Roaring Twenties that has been described as a cautionary[a] tale regarding the American Dream.');
+insert into books values ('4','A brief history of humankind','Yuval Noah Harari','9787508647357','32.5','100','A Brief History of Humankind is a book by Yuval Noah Harari, first published in Hebrew in Israel in 2011[1] based on a series of lectures Harari taught at The Hebrew University of Jerusalem, and in English in 2014.[2][3] The book surveys the history of humankind from the evolution of archaic human species in the Stone Age up to the twenty-first century, focusing on Homo sapiens. The account is situated within a framework provided by the natural sciences, particularly evolutionary biology.');
+insert into books values ('5','A Brief History of Time','Stephen Hawking','9787535732309','100','37.6','A Brief History of Time: From the Big Bang to Black Holes is a popular-science book on cosmology (the study of the origin and evolution of the universe) by British physicist Stephen Hawking.[1] It was first published in 1988. Hawking wrote the book for readers who have no prior knowledge of the universe and people who are just interested in learning something new.');
+insert into orders values ('1','1','2','3','2020-01-01');
+insert into orders values ('2','1','3','4','2020-02-02');
+insert into carts values ('1','1','3','2');
+insert into carts values ('2','1','4','3');
+-- insert into orderitems values('1','1','1');
+-- insert into orderitems values('2','1','2');
+-- insert into orderitems values('3','2','3');
+-- insert into orderitems values('4','2','4');

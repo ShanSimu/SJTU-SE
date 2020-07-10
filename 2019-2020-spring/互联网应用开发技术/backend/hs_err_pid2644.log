@@ -1,0 +1,203 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for Failed to commit area from 0x0000000081800000 to 0x0000000089800000 of length 134217728.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (c:/BuildAgent/work/5ff2f6c26000d570/src/hotspot/os/windows/os_windows.cpp:3296), pid=2644, tid=9644
+#
+# JRE version:  (11.0.6+8) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.6+8-b520.43, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\lib\idea_rt.jar=3973:E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\bin -Dfile.encoding=UTF-8 com.example.demo.DemoApplication
+
+Host: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 18362 (10.0.18362.778)
+Time: Wed May 13 21:44:22 2020 ?D1¨²¡À¨º¡Á?¨º¡À?? elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001e6d7d08000):  JavaThread "Unknown thread" [_thread_in_vm, id=9644, stack(0x000000e597700000,0x000000e597800000)]
+
+Stack: [0x000000e597700000,0x000000e597800000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5de31a]
+V  [jvm.dll+0x710ae5]
+V  [jvm.dll+0x712005]
+V  [jvm.dll+0x7126b3]
+V  [jvm.dll+0x23e3a8]
+V  [jvm.dll+0x5db814]
+V  [jvm.dll+0x5d0a35]
+V  [jvm.dll+0x2faeeb]
+V  [jvm.dll+0x2fae5a]
+V  [jvm.dll+0x2fad32]
+V  [jvm.dll+0x2ffc06]
+V  [jvm.dll+0x348483]
+V  [jvm.dll+0x348b86]
+V  [jvm.dll+0x348583]
+V  [jvm.dll+0x2d57b8]
+V  [jvm.dll+0x2d6957]
+V  [jvm.dll+0x6ef8a7]
+V  [jvm.dll+0x6f109c]
+V  [jvm.dll+0x355a79]
+V  [jvm.dll+0x6d49ee]
+V  [jvm.dll+0x3bf0a3]
+V  [jvm.dll+0x3c15c1]
+C  [jli.dll+0x5363]
+C  [ucrtbase.dll+0x20e72]
+C  [KERNEL32.DLL+0x17bd4]
+C  [ntdll.dll+0x6ce51]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001e6d5c1e5d0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001e6d7d1f800 GCTaskThread "GC Thread#0" [stack: 0x000000e597800000,0x000000e597900000] [id=7376]
+  0x000001e6d7d4f000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000e597900000,0x000000e597a00000] [id=13664]
+  0x000001e6d7d50800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000e597a00000,0x000000e597b00000] [id=12704]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff8d576027]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001e6d7d04370] Heap_lock - owner thread: 0x000001e6d7d08000
+
+Heap address: 0x0000000081800000, size: 2024 MB, Compressed Oops mode: Non-zero based: 0x0000000081800000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (2 events):
+Event: 0.171 Loaded shared library E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\zip.dll
+Event: 0.171 Loaded shared library E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\jimage.dll
+
+
+Dynamic libraries:
+0x00007ff68b240000 - 0x00007ff68b24a000 	E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\java.exe
+0x00007fffdcc80000 - 0x00007fffdce70000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007fffdb200000 - 0x00007fffdb2b2000 	C:\Windows\System32\KERNEL32.DLL
+0x00007fffda710000 - 0x00007fffda9b3000 	C:\Windows\System32\KERNELBASE.dll
+0x00007fffda4c0000 - 0x00007fffda5ba000 	C:\Windows\System32\ucrtbase.dll
+0x00007fffd4f80000 - 0x00007fffd4f99000 	E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\jli.dll
+0x00007fffd4e00000 - 0x00007fffd4e17000 	E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\VCRUNTIME140.dll
+0x00007fffdad90000 - 0x00007fffdaf24000 	C:\Windows\System32\USER32.dll
+0x00007fffcad30000 - 0x00007fffcafb5000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.778_none_e6c6b761130d4fb8\COMCTL32.dll
+0x00007fffda410000 - 0x00007fffda431000 	C:\Windows\System32\win32u.dll
+0x00007fffdaf30000 - 0x00007fffdafce000 	C:\Windows\System32\msvcrt.dll
+0x00007fffdb370000 - 0x00007fffdb396000 	C:\Windows\System32\GDI32.dll
+0x00007fffdc8c0000 - 0x00007fffdcbf6000 	C:\Windows\System32\combase.dll
+0x00007fffdaa60000 - 0x00007fffdabf4000 	C:\Windows\System32\gdi32full.dll
+0x00007fffda9c0000 - 0x00007fffdaa5e000 	C:\Windows\System32\msvcp_win.dll
+0x00007fffdc5f0000 - 0x00007fffdc710000 	C:\Windows\System32\RPCRT4.dll
+0x00007fffdac00000 - 0x00007fffdac80000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007fffdcc10000 - 0x00007fffdcc3e000 	C:\Windows\System32\IMM32.DLL
+0x00007fffd3400000 - 0x00007fffd349d000 	E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\msvcp140.dll
+0x00007fff8d290000 - 0x00007fff8dd4d000 	E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\server\jvm.dll
+0x00007fffdb2c0000 - 0x00007fffdb363000 	C:\Windows\System32\ADVAPI32.dll
+0x00007fffdb420000 - 0x00007fffdb4b7000 	C:\Windows\System32\sechost.dll
+0x00007fffdb3a0000 - 0x00007fffdb3a8000 	C:\Windows\System32\PSAPI.DLL
+0x00007fffc5b00000 - 0x00007fffc5b09000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007fffd6c70000 - 0x00007fffd6c94000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007fffd2410000 - 0x00007fffd241a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007fffd6420000 - 0x00007fffd644d000 	C:\Windows\SYSTEM32\winmmbase.dll
+0x00007fffda440000 - 0x00007fffda48a000 	C:\Windows\System32\cfgmgr32.dll
+0x00007fffdb670000 - 0x00007fffdb6df000 	C:\Windows\System32\WS2_32.dll
+0x00007fffd9b70000 - 0x00007fffd9b81000 	C:\Windows\System32\kernel.appcore.dll
+0x00007fffc70b0000 - 0x00007fffc70c1000 	E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\verify.dll
+0x00007fffd82f0000 - 0x00007fffd84e4000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007fffbf960000 - 0x00007fffbf98a000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007fffc6f80000 - 0x00007fffc6fa9000 	E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\java.dll
+0x00007fffd61e0000 - 0x00007fffd61ef000 	E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\instrument.dll
+0x00007fffc6f60000 - 0x00007fffc6f78000 	E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\zip.dll
+0x00007fffd61c0000 - 0x00007fffd61cb000 	E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.778_none_e6c6b761130d4fb8;E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\jbr\bin\server
+
+VM Arguments:
+jvm_args: -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\lib\idea_rt.jar=3973:E:\Toolbox\apps\IDEA-U\ch-0\193.6911.18\bin -Dfile.encoding=UTF-8 
+java_command: com.example.demo.DemoApplication
+java_class_path (initial): E:\»¥ÁªÍø_½ÌÑ§\test\target\classes;C:\Users\mrcui\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.2.6.RELEASE\spring-boot-starter-data-jpa-2.2.6.RELEASE.jar;C:\Users\mrcui\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.2.6.RELEASE\spring-boot-starter-aop-2.2.6.RELEASE.jar;C:\Users\mrcui\.m2\repository\org\springframework\spring-aop\5.2.5.RELEASE\spring-aop-5.2.5.RELEASE.jar;C:\Users\mrcui\.m2\repository\org\aspectj\aspectjweaver\1.9.5\aspectjweaver-1.9.5.jar;C:\Users\mrcui\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.2.6.RELEASE\spring-boot-starter-jdbc-2.2.6.RELEASE.jar;C:\Users\mrcui\.m2\repository\com\zaxxer\HikariCP\3.4.2\HikariCP-3.4.2.jar;C:\Users\mrcui\.m2\repository\org\springframework\spring-jdbc\5.2.5.RELEASE\spring-jdbc-5.2.5.RELEASE.jar;C:\Users\mrcui\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\mrcui\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\mrcui\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\mrcui\.m2\repository\org\hibernate\hibernate-core\5.4.12.Final\hibernate-core-5.4.12.Final.jar;C:\Users\mrcui\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\mrcui\.m2\repository\org\javassist\javassist\3.24.0-GA\javassist-3.24.0-GA.jar;C:\Users\mrcui\.m2\repository\net\bytebuddy\byte-buddy\1.10.8\byte-buddy-1.10.8.jar;C:\Users\mrcui\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\mrcui\.m2\repository\org\jboss\jandex\2.1.1.Final\jandex-2.1.1.Final.jar;C:\Users\mrcui\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\mrcui\.m2\repository\org\dom4j\dom4j\2.1.1\dom4j-2.1.1.jar;C:\Users\mrcui\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.0.Final\hibernate-commons-annotations-5.1.0.Final.
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     bool BytecodeVerificationLocal                = false                                     {product} {command line}
+     bool BytecodeVerificationRemote               = false                                     {product} {command line}
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+     bool ManagementServer                         = true                                      {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2122317824                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7549744                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 244108496                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;E:\WebApplication\Node\;E:\WebApplication\mysql5.7.25\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;E:\Cygwin\bin;C:\Users\mrcui\AppData\Local\Microsoft\WindowsApps;C:\Users\mrcui\AppData\Roaming\npm;E:\Microsoft VS Code\bin;E:\Bandizip\
+USERNAME=dell
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 18362 (10.0.18362.778)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 8089M (403M free)
+TotalPageFile size 32665M (AvailPageFile size 25M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 57M, peak: 185M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.6+8-b520.43) for windows-amd64 JRE (11.0.6+8-b520.43), built on Feb  3 2020 14:18:56 by "" with MS VC++ 14.0 (VS2015)
+
+END.
