@@ -1,0 +1,17 @@
+<!--pages/cart/cart.wxml-->
+<view>
+  <view >
+    <block wx:for="{{books}}" wx:for-item="book">
+        <van-card
+        num="{{book.number}}"
+        desc="{{book.author}}"
+        title="{{book.title}}"
+        thumb="{{book.iconBase64}}"
+        />  
+    </block> 
+  </view>
+  <van-submit-bar
+  button-text="提交订单"
+  bind:submit="onSubmit"
+/>
+</view>

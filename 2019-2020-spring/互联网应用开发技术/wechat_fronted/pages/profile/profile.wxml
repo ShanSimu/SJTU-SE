@@ -1,0 +1,4 @@
+<!--pages/profile/profile.wxml-->
+<view class="container">
+  <van-button type="warning" bindtap="relauch">退出账户</van-button>
+</view>

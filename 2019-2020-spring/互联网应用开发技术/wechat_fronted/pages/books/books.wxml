@@ -1,0 +1,44 @@
+<!--pages/books/books.wxml-->
+<view>
+<!-- 搜索框 -->
+  <van-search 
+  value="{{ searchValue }}" 
+  placeholder="请输入搜索关键词" 
+  show-action
+  bind:search="onSearch"
+  bind:cancel = "onCancel"
+  />
+<!--书籍-->
+  <view style="display:flex; justify-content:space-around; flex-wrap:wrap;">
+    <block wx:for="{{searchBooks}}" wx:for-item="book">
+      <view style="width:9rem; height:13rem;text-aliSgn:center">
+        <van-image bindtap="bindViewTap" data-book='{{book}}' width="9rem" height="9rem" fit="contain" src="{{book.icon.iconBase64}}" /> 
+          <text bindtap="bindDetail" data-book='{{book}}'>{{book.title}}\n</text>
+      </view>
+    </block> 
+  </view>
+  <!--底边栏-->
+  <van-tabbar active="{{ active }}" bind:change="onChange">
+    <van-tabbar-item name = "cart" icon="cart-o">购物车</van-tabbar-item>
+    <van-tabbar-item name = "order" icon="bag-o">订单</van-tabbar-item>
+    <van-tabbar-item name = "profile" icon="manager-o">账户</van-tabbar-item>
+  </van-tabbar>
+  <!--遮罩层-->
+  <van-overlay show="{{ show }}" bind:click="onClickHide">
+    <view class="wrapper">
+      <view style="display:flex;justify-content:center;align-items:center;height:25rem">
+        <van-image width="13rem" height="13rem" fit="contain" src="{{book.icon.iconBase64}}" /> 
+        <view>
+          <text class="details">Title: {{book.title}}\n</text>
+          <text class="details">Author: {{book.author}}\n</text>
+          <text class="details">ISBN: {{book.isbn}}\n</text>
+        </view>
+      </view>
+    </view>
+      <van-goods-action fixed = "true">
+        <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickCart"/>
+        <van-goods-action-button text="加入购物车" type="warning"bind:click="onClickButton"/>
+      </van-goods-action>
+  </van-overlay>
+<van-dialog id="van-dialog" />
+</view>

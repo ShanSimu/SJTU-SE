@@ -1,0 +1,7 @@
+<!--pages/bookdetail/bookdetail.wxml-->
+<view>
+  <text>Title: {{book.title}}\n</text>
+  <text>Author: {{book.author}}\n</text>
+  <text>ISBN: {{book.isbn}}\n</text>
+  <text>detail:{{book.details}}\n</text>
+</view>

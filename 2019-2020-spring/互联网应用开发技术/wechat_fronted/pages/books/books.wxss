@@ -1,0 +1,5 @@
+/* pages/books/books.wxss */
+.details{
+  width: 100%;
+  color:#FFF;
+}

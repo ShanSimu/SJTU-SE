@@ -1,0 +1,13 @@
+<view>
+  <view >
+    <block wx:for="{{books}}" wx:for-item="book">
+        <van-card
+        num="{{book.number}}"
+        desc="{{book.author}}"
+        title="{{book.title}}"
+        thumb="{{book.iconBase64}}"
+        desc="{{book.date}}"
+        />  
+    </block> 
+  </view>
+</view>
